@@ -10,7 +10,9 @@ lists load averages of local machine and a list of servers, or states if the ser
 
 # status.sh
 
-basic status script for i3bar. shows current track from DeaDBeeF and/or number of tasks from todo.sh.
+basic status script for i3bar. shows current track from DeaDBeeF and/or number of tasks from todo.sh. prepends to whatever is already in your i3bar configuration.
+
+![status screenshot](.images/status.png)
 
 # conkify.sh
 
