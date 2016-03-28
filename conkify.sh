@@ -19,7 +19,7 @@ then
 	export WHITE='${color white}'
 	export DEFAULT='${color}'
 else
-	export LIGHT_BLUE="\e[0;34m"
-	export RED="\e[0;31m"
-	export DEFAULT="\e[0;0m"
+	export LIGHT_BLUE="\x1b[0;34m"
+	export RED="\x1b[0;31m"
+	export DEFAULT="\x1b[0;0m"
 fi
