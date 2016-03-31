@@ -19,6 +19,9 @@ then
 	export WHITE='${color white}'
 	export DEFAULT='${color}'
 else
+	export GREEN="\x1b[0;32m"
+	export PURPLE="\x1b[0;35m"
+	export CYAN="\x1b[0;36m"
 	export LIGHT_BLUE="\x1b[0;34m"
 	export RED="\x1b[0;31m"
 	export DEFAULT="\x1b[0;0m"
