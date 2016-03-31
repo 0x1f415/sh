@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# use GNU sed
+source .env
+# because non-login non-interactive mode doesn't have gnu coreutils installed via homebrew in its $PATH
+sed() {
+if hash gsed 2>/dev/null;
+	then
+		gsed "$@"
+	else
+		sed "$@"
+	fi
+}
+
+export -f sed
+
 hnames="luna ironduke Applejack Braeburn"
 
 source ~/sh/conkify.sh $1
