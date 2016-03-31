@@ -17,6 +17,11 @@ export -f sed
 hnames="luna ironduke Applejack Braeburn"
 
 source ~/sh/conkify.sh $1
+if [[ $1 == "geektool" ]]
+then
+	export LIGHT_BLUE="$CYAN"
+fi
+
 
 export sedexp="s/.*load averages\?: [0-9]\+\.[0-9]\+,\? \([0-9]\+\.[0-9]\+\).*/\1/g"
 
