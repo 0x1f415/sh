@@ -11,7 +11,7 @@ if hash gsed 2>/dev/null;
 	then
 		gsed "$@"
 	else
-		sed "$@"
+		env sed "$@"
 	fi
 }
 
