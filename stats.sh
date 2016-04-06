@@ -47,7 +47,6 @@ then
 	export LIGHT_BLUE="$CYAN"
 fi
 
-
 export sedexp="s/.*load averages\?: [0-9]\+\.[0-9]\+,\? \([0-9]\+\.[0-9]\+\).*/\1/g"
 
 info(){
