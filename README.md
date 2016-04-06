@@ -19,3 +19,7 @@ basic status script for i3bar. shows current track from DeaDBeeF and/or number o
 exports variables containing either conky color codes if the first argument is "conky", or ANSI escape sequences otherwise. see `stats.sh` for an example.
 
 incomplete, but you can easily extend for your own use.
+
+# fixpdf.sh
+
+some professors at my university give out slides in pdf format with two slides per page, which might be convenient for printing but I find incredibly irritating when trying to read digitally. this is a simple imagemagick oneliner to undo that.
