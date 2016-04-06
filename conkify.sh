@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [ "$1" == "conky" ]
 then
 	export BLACK='${color black}'
@@ -18,6 +19,17 @@ then
 	export LIGHT_CYAN='${color LightCyan}'
 	export WHITE='${color white}'
 	export DEFAULT='${color}'
+elif [ "$1" == "html" ]
+then
+	# use responsibly
+
+	for i in BLACK WHITE RED ORANGE YELLOW GREEN BLUE CYAN PURPLE LIGHT_RED LIGHT_ORANGE LIGHT_YELLOW LIGHT_GREEN LIGHT_BLUE LIGHT_CYAN LIGHT_PURPLE
+	do
+		declare "$i=<span class=\"$i\">"
+		export $i
+	done
+
+	export DEFAULT='</span>'
 else
 	export GREEN="\x1b[0;32m"
 	export PURPLE="\x1b[0;35m"
