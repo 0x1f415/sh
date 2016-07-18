@@ -1,6 +1,6 @@
-# oggify.sh
+# oggify.py
 
-does a *uni-directional* sync between two directories, converting lossless audio formats to lossy ogg. smart enough to remove files that have been deleted/ignored since the first run. ignores any files in a folder (or subfolder of a folder) containing a `.no-oggify` file. should be okay to run as a cron job. useful for portable music players/phones.
+does a *uni-directional* sync between two directories, converting lossless audio formats to lossy ogg. ignores any files in a folder (or subfolder of a folder) containing a `.no-oggify` file. should be okay to run as a cron job. useful for portable music players/phones.
 
 this is **UNSUPPORTED AND NOT THOROUGHLY TESTED.** I am not responsible for loss of data! 
 
