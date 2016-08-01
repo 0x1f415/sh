@@ -4,7 +4,7 @@ convertExts = ('.flac', '.m4a', '.wav')
 noCopyExts = ('.zip', '.sh', '.part', '.gif', '.log', '.cue', '.CUE', '.m3u', '.avi', '.mp4', '.txt', '.nsf', '.it', '.sfv', '.pdf', '.swp', '.mov')
 bitrate = '128k'
 import os, subprocess, shutil
-for root, dirs, files in os.walk(sourcedir, topdown=True):
+for root, dirs, files in os.walk(ur""+sourcedir, topdown=True):
     newroot = root.replace(sourcedir, targetdir)
     if '.no-oggify' in files:
         dirs[:] = []
