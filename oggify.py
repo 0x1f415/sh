@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 sourcedir = 'D:/Music/'
 targetdir = 'D:/ogg/'
 convertExts = ('.flac', '.m4a', '.wav')
