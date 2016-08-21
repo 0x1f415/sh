@@ -20,3 +20,13 @@ for root, dirs, files in os.walk(ur""+sourcedir, topdown=True):
             if not os.path.exists(newroot+'/'+file):
                 shutil.copyfile(root+'/'+file, newroot+'/'+file)
                 print newroot+'/'+file
+for root, dirs, files in os.walk(ur""+targetdir, topdown=True):
+    oldroot = root.replace(targetdir, sourcedir)
+    if not os.path.exists(oldroot) or os.path.isfile(oldroot + '/.no-oggify'):
+        dirs[:] = []
+        shutil.rmtree(root)
+    else:
+        for file in [a for a in files if a.endswith('.ogg') and a[:-4].lower().endswith(convertExts)]:
+            if not os.path.isfile(oldroot+'/'+file[:-4]): os.remove(root+'/'+file)
+        for file in [a for a in files if not a.lower().endswith('.ogg')]:
+            if not os.path.exists(oldroot) or not os.path.isfile(oldroot+'/'+file): os.remove(root+'/'+file)
