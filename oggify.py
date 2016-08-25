@@ -30,4 +30,4 @@ for root, dirs, files in os.walk(ur""+targetdir, topdown=True):
         for file in [a for a in files if a.endswith('.ogg') and a[:-4].lower().endswith(convertExts)]:
             if not os.path.isfile(oldroot+'/'+file[:-4]): os.remove(root+'/'+file)
         for file in [a for a in files if not a.lower().endswith('.ogg')]:
-            if not os.path.exists(oldroot) or not os.path.isfile(oldroot+'/'+file): os.remove(root+'/'+file)
+            if not os.path.exists(oldroot) or not os.path.isfile(oldroot+'/'+file) and not file == '.stfolder': os.remove(root+'/'+file)
